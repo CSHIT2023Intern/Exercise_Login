@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Login身份驗證網頁</title>
+
         <style>
             #div1{
                 width: 250px;
@@ -22,6 +24,8 @@
                 margin-bottom: 5px;
             }
         </style>
+
+        <!-- 身份驗證 -->
         <script>
             function check(){
                 var acc = document.getElementById("account").value;
@@ -43,15 +47,17 @@
             }
         </script>
     </head>
+
     <body>
         <div id="div1">
-            <h3 id="title">登入頁面</h3>
+            <h1 id="title">登入頁面</h1>
+
             <p>
-                帳號：<input type="text" id="account"><br>
-                密碼：<input type="text" id="password"><br><br>
+                <label for="account">帳號：</label><input type="text" id="account"><br>
+                <label for="password">密碼：</label><input type="text" id="password"><br><br>
             </p>
+
             <input type="button" id="submit" value="登入" onclick="check();">
-        </div>
-        
+        </div>    
     </body>
 </html>
