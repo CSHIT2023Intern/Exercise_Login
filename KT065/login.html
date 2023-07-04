@@ -1,75 +1,72 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <title>Login</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fcfec8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #5fe3e0;
+            margin: 0;
         }
-        .container {
-            max-width: 300px;
-            margin: 0 auto;
+
+        .main-bg {
+            background: #9d8bdd;
             padding: 20px;
-            background-color: rgb(149, 249, 229);
             border-radius: 5px;
-            box-shadow: 0 0 10px rgb(0, 0, 0);
+   
         }
-        h2 {
-            text-align: center;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        input[type="submit"] {
-            width: 100%;
-            padding: 8px;
-            border: none;
-            background-color: #4CAF50;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-        .error {
-            color: red;
-            margin-bottom: 10px;
-        }
+	
+        /* Rest of the CSS styles... */
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
-            <div id="errorMsg" class="error"></div>
-            <input type="submit" value="Login">
-        </form>
-    </div>
+	<div class="main-bg">
+		<!-- title -->
+		<h1 style="color: MidnightBlue; font-size: 80px;">登入系統</h1>
+		<!-- //title -->
+		<div class="sub-main-w3">
 
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
+			</div>
+			<!-- vertical tabs -->
+			<div class="vertical-tab">
+				<div id="section1" class="section-w3ls">
+					<article>
+						<form action="" class="Login" onsubmit="return validateForm()">
+							<h2>帳號</h2>
+							<input id="usernameInput" type="text" placeholder="請輸入帳號">
+							<h2>密碼</h2>
+							<input id="passwordInput" type="password" placeholder="請輸入密碼">
+							<button type="submit">登入</button>
+					</form>
+					<script>
+						function validateForm() {
+							var username = document.getElementById("usernameInput").value;
+							var password = document.getElementById("passwordInput").value;
+							var correctUsername = "user";
+							var correctPassword = "0000";
+			
+							if (username !== correctUsername) {
+								alert("帳號錯誤");
+								return false;
+							}
+			
+							if (password !== correctPassword) {
+								alert("密碼輸入錯誤");
+								return false;
+							}
+					
+			
+							alert("帳號密碼輸入正確");
+							return true;
+						}
+					</script>
 
-            if (username === "user" && password === "0000") {
-                window.location.href = "http://www.csmu.edu.tw";
-            } else {
-                document.getElementById("errorMsg").textContent = "Invalid username or password.";
-            }
-        });
-    </script>
+					</article>
+				</div>
+			</div>	
+	
+	</div>	
+
 </body>
+
 </html>
