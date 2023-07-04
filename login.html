@@ -49,7 +49,7 @@
                                     }
                                     else{
                                         window.alert('登入失敗');
-                                        password.value="";
+                                        password.value=""; 
                                     }
                                 }
                                 function enter(event, nextField){
@@ -64,7 +64,7 @@
                                 }
                         </script>
                     <form onsubmit="login()">
-                    <input type="textbox" id="user" name="user" placeholder="帳號"onkeydown="enter(event, 'password')">
+                    <input type="textbox" id="user" name="user" placeholder="帳號" onkeydown="enter(event, 'password')">
                     <p><input type="password" id="password" name="password" placeholder="密碼" onkeydown="enter(event,'submit')">
                     <p><input type="submit" value="登入">
                     </form> 
