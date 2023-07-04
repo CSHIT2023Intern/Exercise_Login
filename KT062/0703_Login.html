@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login身份驗證網頁</title>
+        <style>
+            #div1{
+                width: 250px;
+                margin: 0 auto;
+                background-color: #f7b2cf;
+                text-align: center;
+            }
+            p{
+                height: 50px;
+            }
+            #title{
+                height: 15px;
+                color: #75018c;
+                font-size: 25px;
+            }
+            #submit{
+                margin-bottom: 5px;
+            }
+        </style>
+        <script>
+            function check(){
+                var acc = document.getElementById("account").value;
+                var pwd = document.getElementById("password").value;
+                if(acc!='' && pwd!=''){
+                    if(acc=='user' && pwd=='0000'){
+                        alert('成功登入！');
+                    }
+                    else{
+                        alert('帳號或密碼錯誤！');
+                    }
+                }
+                else if(acc==''){
+                    alert('帳號未填寫！');
+                }
+                else if(pwd==''){
+                    alert('密碼未填寫！')
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <h3 id="title">登入頁面</h3>
+            <p>
+                帳號：<input type="text" id="account"><br>
+                密碼：<input type="text" id="password"><br><br>
+            </p>
+            <input type="button" id="submit" value="登入" onclick="check();">
+        </div>
+        
+    </body>
+</html>
