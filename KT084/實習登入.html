@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log in Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#f4f4f4;
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            height:92vh;	
+        }
+        
+        .container {
+            max-width:500px;
+			max-height:500px;
+            padding:60px;
+            background-color:#c0d4e1;
+            border: 1px solid#ccc;
+            border-radius:15px;
+            box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
+		}
+        
+        h2 {
+            text-align:center;
+			margin-top:10px;
+			margin-bottom:35px;
+        }
+        
+        label, input {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            margin-bottom:20px;
+			border-radius:10px;
+			border:none;
+			margin-left:10px;
+        }
+        
+        input[type="submit"] {
+            background-color:#7595b6;
+            color:#fff;
+            border:none;
+			border-radius:10px;
+            padding:15px 20px;
+            cursor:pointer;
+            margin-left:53px;
+	    }
+		
+		form {
+			dissplay:flex;
+			margin-end:auto;
+		}	    
+		
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Log in</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" style="text-align:center;" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" style="text-align:center;" required>
+            
+            <input type="submit" value="Log in">
+			
+        </form>
+        <div id="error" class="error"></div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            
+			var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            if (username === "user" && password === "0000") {
+                window.location.href = "authenticated.html";
+            } else {
+                alert("Invalid username or password , please try again.")
+            }
+			
+        });
+    </script>
+</body>
+</html>
+
+
+	
+	
+	
+	
